@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Бронирование места в лагерь</title>
+    <style>
+     body {
+        background-color: #fadadd;
+    }
+        #confirmation-message {
+            color: green;
+            display: none;
+        }
+    </style>
+    <script>
+        function showConfirmationMessage(event) {
+            event.preventDefault();
+            var confirmationMessage = document.getElementById("confirmation-message");
+            var sessionCheckboxes = document.querySelectorAll('input[name="session[]"]:checked');
+
+            if (sessionCheckboxes.length === 0) {
+                alert("Выберите как минимум одну смену.");
+                return;
+            }
+
+            confirmationMessage.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+<h1>Бронирование места в лагерь</h1>
+<form action="#" method="post" onsubmit="showConfirmationMessage(event)">
+    <label for="name">ФИО ребёнка:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Ваша электронная почта:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="check-in">Дата рождения ребёнка:</label>
+    <input type="date" id="check-in" name="check-in" required><br><br>
+
+    <label for="session">Выберите смену:</label><br>
+    <input type="checkbox" id="first-session" name="session[]" value="first-session">
+    <label for="first-session">Первая смена</label><br>
+
+    <input type="checkbox" id="second-session" name="session[]" value="second-session">
+    <label for="second-session">Вторая смена</label><br>
+
+    <input type="checkbox" id="third-session" name="session[]" value="third-session">
+    <label for="third-session">Третья смена</label><br>
+
+    <input type="checkbox" id="fourth-session" name="session[]" value="fourth-session">
+    <label for="fourth-session">Четвертая смена</label><br><br>
+
+    <label for="direction">Направление:</label>
+    <select id="direction" name="direction" required>
+        <option value="none">-</option>
+        <option value="scientific">Научное</option>
+        <option value="creative">Творческое</option>
+        <option value="sports">Спортивное</option>
+    </select>
+    <span style="font-size: 12px; color: #888;">(Вы можете не выбирать направление сейчас, также ребёнок может по своему желанию изменить направление на смене.)</span><br><br>
+
+    <label for="comments">Комментарии:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Например: у ребёнка непереносимость лактозы"></textarea><br><br>
+
+    <fieldset>
+        <legend>Выберите способ оплаты:</legend>
+        <input type="radio" id="credit-card" name="payment" value="credit-card" required>
+        <label for="credit-card">Кредитная карта</label><br>
+
+        <input type="radio" id="paypal" name="payment" value="paypal" required>
+        <label for="paypal">PayPal</label><br>
+    </fieldset><br>
+
+    <input type="submit" value="Забронировать">
+    <input type="reset" value="Очистить">
+
+    <p id="confirmation-message">
+        Спасибо за оформление заявки на бронирование! На Вашу электронную почту придёт пиьмо с дальнейшими инструкциями.
+    </p>
+</form>
+</body>
+</html>
