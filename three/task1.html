@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СПО "Кадр"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: auto;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #ff8000;
+            color: #fff;
+        }
+        .nav-box {
+            flex: 1;
+            text-align: center;
+            background-color: #913a07;
+            padding: 20px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .nav-box a {
+            text-decoration: none;
+            color: #00b34a;
+        }
+        .content {
+            display: flex;
+            flex: 2;
+            justify-content: space-between;
+            align-items: stretch;
+            padding: 10px;
+            background-color: #ff7518;
+        }
+
+        .content-box {
+            flex: 1;
+            padding: 70px;
+            margin: 5px;
+            border: 2px solid green;
+            border-radius: 10px;
+            background-color: orange;
+
+        }
+        .content img {
+            max-width: 100%;
+            max-height: 250px;
+            float: left;
+            margin-right: 10px;
+            background-color: #FFD700;
+            border: 2px solid green;
+            border-radius: 10px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #ff6800;
+            color: #00b34a;
+        }
+        .footer-box {
+            flex: 1;
+            text-align: center;
+            background-color: #913a07;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 800px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .nav-box {
+                flex: 1;
+                width: 100%;
+            }
+            .content {
+                flex-direction: column;
+                display: grid;
+                grid-template-rows: 1fr auto 1fr;
+                align-items: center;
+            }
+            .content-box {
+                flex: 1;
+                height: auto;
+                padding: 1%;
+                align-self: stretch;
+            }
+            .content img {
+                max-width: 100%;
+                max-height: 250px;
+                float: left;
+                margin-right: 10px;
+            }
+            .footer {
+                align-items: center;
+            }
+            .footer-box {
+                flex: 1;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="nav">
+        <div class="nav-box">
+            <a href="https://t.me/spokadr">Телеграм</a>
+        </div>
+        <div class="nav-box">
+            <a href="https://vk.com/spo_kadr">Вконтакте</a>
+        </div>
+        <div class="nav-box">
+            <a href="https://www.tiktok.com/@spo_kadr">TikTok</a>
+        </div>
+        <div class="nav-box">
+            <a href="https://vk.com/album-66636931_293665050?rev=1">Сезон 2023</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content-box" style="flex: 1;">
+            <p>Привет! Мы - студенческий педагогический отряд "Кадр" 📷<br><br>
+                С нами ты:<br>
+                🎬 Получишь Свидетельство вожатого государственного образца;<br>
+                🎬 Узнаешь, как находить контакт с любым ребенком;<br>
+                🎬 Научишься выступать на публику;<br>
+                🎬 Обретёшь кучу друзей и станешь частичкой большой семьи под названием СПО "Кадр"!</p>
+        </div>
+        <div class="content-box" style="flex: 2;">
+        <img src="flag.jpg" alt="Флаг">
+        <p>Мы - объединение, которое дает большие возможности.<br>
+            Актуальность его заключается в том, что это не проект на год, отряды имеют востребовательность с 1948 года и до сих пор.<br>
+            Мы - вожатые, которые выезжают в школьные каникула, чтобы устроить детям сказку, научить их чему-то и научиться самим.<br>
+            При этом мы не только создаем команду вожатых на сезон, но и участвуем в различных городских конкурсах, соревнованиях.</p>
+    </div>
+    <div class="content-box" style="flex: 1;">
+        <p>27 октября 2014 года Кадр вошёл в состав Санкт-Петербургских студенческих отрядов! <br>
+            Традиционно наш отряд отмечает свой день рождения 31 октября, потому что именно тогда появился флаг.<br><br><br>
+            Подписывайся на наши соцсети, чтобы следить за новостями, и приходи на ШВМы уже в феврале!</p>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-box">
+        <p>Телефон: +7(922)801-17-28</p>
+    </div>
+    <div class="footer-box">
+        <p>Адрес: г. Санкт-Петербург, улица Ленсовета д.14</p>
+    </div>
+</div>
+</div>
+</body>
+</html>
